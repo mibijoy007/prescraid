@@ -26,10 +26,12 @@ import {
   NavigationMenuTrigger,
   // navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { IoHomeOutline } from "react-icons/io5";
 
 import React from "react";
 import { appsDetails, appsDetailsType } from "@/lib/appsDetails";
 import { Button } from "./ui/button";
+import { siteConfig } from "@/lib/siteConfig";
 
 
 
@@ -38,31 +40,50 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center space-x-4 lg:space-x-8">
-      <Link href="/" className="mr-6 ml-2 md:ml-8 flex items-center space-x-2">
+    <nav className="flex items-center sm:space-x-[4px] md:space-x-3 lg:space-x-6">
+      <Link href="/" className="mr-6 ml-2 md:ml-8 flex items-center space-x-2 text-red-600 font-extrabold">
         {/* <FaCloudSun className=" h-8 w-8"/> */}
         {/* <span className="font-bold text-2xl sm:text-xl lg:text-3xl">Mi&apos;s</span> */}
-        <span className="font-bold text-2xl sm:text-xl lg:text-3xl">
-        <div className="text-4xl text-red-600 font-mono font-extrabold">
-    {/* prescripDraw */}
-    PrescAid
+
+
+        <IoHomeOutline className="text-2xl  "/>
+       
+        <div className="  text-2xl  md:text-3xl font-mono ">
+    {siteConfig.name}
     </div>
-        </span>
+     
+
+
       </Link>
 
+
+      {/* <Link
+        href="/"
+        className={cn(
+          " font-medium transition-colors hover:text-blue-500 hidden sm:inline-block ",
+          pathname === "/" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        <div className="flex justify-center items-center gap-1">
+        <IoHomeOutline/>
+        <div>
+          Home
+          </div>
+        </div>
+      </Link> */}
 
 
       <Link
         href="/prescripdraw"
         className={cn(
           "text-sm font-medium transition-colors hover:text-blue-500 hidden sm:inline-block",
-          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+          pathname === "/prescripdraw" ? "text-foreground" : "text-foreground/60"
         )}
       >
        
-       <Button className=" hover:">
+       <Button className="m-0 p-0 px-1 md:px-2 h-9 w-[8rem] text-xs md:text-sm md:h-9 lg:h-10 md:w-full">
       
-        Write your Prescription
+        Write a Prescription
      
         </Button>
       </Link>
@@ -71,21 +92,22 @@ export default function Nav() {
         href="/prescripimg"
         className={cn(
           "text-sm font-medium transition-colors hover:text-blue-500 hidden sm:inline-block",
-          pathname === "/contact" ? "text-foreground" : "text-foreground/60"
+          pathname === "/prescripimg" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        <Button className="">
+        <Button className="m-0 p-0 md:px-3 h-9 w-[8rem] text-xs md:text-sm md:h-9 lg:h-10 md:w-full">
      
-      Scan Prescription Image 
+      Scan Prescription Img 
      
     </Button>
+    
       </Link>
 
       <div className="hidden sm:inline-block">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="border-2 border-gray-400 rounded-lg w-40 hover:text-blue-500">Other Apps </NavigationMenuTrigger>
+              <NavigationMenuTrigger className="m-0 p-0 h-7 w-[6rem] text-xs md:text-sm md:h-9 md:w-32 border-2 border-gray-400 rounded-lg  hover:text-blue-500" >Other Apps </NavigationMenuTrigger>
               <NavigationMenuContent className=" dark:bg-slate-900">
                 <ul className="grid w-[280px] md:w-[400px] gap-3 p-4 lg:grid-cols-2 lg:w-[550px] xl:w-[650px] ">
                   {appsDetails.map((component: appsDetailsType) => (

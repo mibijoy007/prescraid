@@ -95,10 +95,20 @@ const Drawing = ({ }) => {
         toast('Canvas is blank!',
           {
             icon: '❌',
+            // style: {
+            //   borderRadius: '10px',
+            //   background: '#fffbf2',
+            //   color: '#14315d',
+            // },
             style: {
               borderRadius: '10px',
-              background: '#fffbf2',
-              color: '#14315d',
+              background: 'red',
+              // background: '#fffbf2',
+              // background: '#4a6cf7',
+              // color: '#14315d',
+              color: 'white',
+              // border: '3px solid blue',
+              fontWeight: 'bold'
             },
           }
         );

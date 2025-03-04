@@ -1,10 +1,7 @@
 'use client'
 // import { Button } from '@/components/ui/button'
 import React from 'react'
-// import { ReactSketchCanvas } from 'react-sketch-canvas'
-import Drawing from '@/components/Drawing'
-// import Mdxoutput from '@/components/Mdxoutput'
-// import Wrapper from '@/components/Wrapper'
+
 // const styles = {
 //     border: '0.0625rem solid #9c9c9c',
 //     borderRadius: '0.25rem',
@@ -15,20 +12,15 @@ import Drawing from '@/components/Drawing'
 const prescripimg = () => {
     return (
         <div className='min-h-100vh container p-4'>
-            <div className='text-2xl font-bold  md:text-4xl'>
-                Start Writinig Your Prescription
+            <div className='text-2xl font-bold  md:text-3xl'>
+                Input Prescription Image
             </div>
-            <div className='bg-black h-1 w-full my-2' />
+            <div className='bg-gray-400 dark:bg-gray-500 h-[2px] w-full my-2 mt-2' />
             <br />
             {/* jp-drawing */}
             <br />
 
-            <Drawing />
-
-
-            {/* <Wrapper/> */}
-
-            {/* <Mdxoutput /> */}
+           
         </div>
     )
 }

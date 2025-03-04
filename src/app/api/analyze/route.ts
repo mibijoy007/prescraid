@@ -90,8 +90,8 @@ export async function POST(req:Request) {
     const genAI = new GoogleGenerativeAI(gemini_api_key);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
     
-    const prompt : string = "Let's say you are a doctor. Now read the image which is a hand written prescription and give me all information in mdx format (try not to exclude any valid data). If there are other languages, translate them to english."
-    // const prompt : string = "Let's say you are a doctor. Now read the image which is a hand written prescription and give me all information in json format (try not to exclude any valid data). If there are other languages, translate them to english."
+    // const prompt : string = "Let's say you are a doctor. Now read the image which is a hand written prescription and give me all information in mdx format (try not to exclude any valid data). If there are other languages, translate them to english."
+    const prompt : string = "Let's say you are a doctor. Now read the image which is a hand written prescription and give me all information in json format (try not to exclude any valid data). If there are other languages, translate them to english."
     
     const result = await model.generateContent(
       [

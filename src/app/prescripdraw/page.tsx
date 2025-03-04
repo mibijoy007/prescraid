@@ -15,10 +15,13 @@ import Drawing from '@/components/Drawing'
 const prescripDraw = () => {
     return (
         <div className='min-h-100vh container p-4'>
-            <div className='text-2xl font-bold  md:text-4xl'>
+            <div>
+                
+            </div>
+            <div className='text-2xl font-bold  md:text-3xl'>
                 Start Writinig Your Prescription
             </div>
-            <div className='bg-black h-1 w-full my-2' />
+            <div className='bg-gray-400 dark:bg-gray-500 h-[2px] w-full my-2 mt-2' />
             <br />
             {/* jp-drawing */}
             <br />
